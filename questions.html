@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <title>Edgecut</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    /* Body style for flex layout */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    }
+
+    footer {
+      margin-top: auto; /* Push footer to the bottom */
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+      grid-template-rows: repeat(3, 1fr); /* 3 equal rows */
+      gap: 10px; /* Space between items */
+      padding: 10px;
+      flex-grow: 1; /* Allow this section to take available space */
+    }
+
+    .grid-item {
+      background-color: #F7F7F7;
+      border: 1px solid #ccc;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .plus-sign {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      background-color: #333;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      cursor: pointer;
+    }
+
+    h4 {
+      margin: 0;
+      padding-bottom: 10px;
+    }
+
+    h5 {
+      font-size: 14px;
+      margin: 0;
+      color: gray;
+    }
+
+    h1, h4 {
+      text-align: center;
+    }
+
+    h1{
+      margin-top: 30px;
+      font-weight: bolder;
+    }
+    h4 {
+      font-size:15px ;
+      margin-top: 15px;
+      color: grey;
+    }
+
+    /* Footer styles */
+    .position-relative {
+      display: flex;
+      align-items: center;
+    }
+
+    .form-control {
+      border-radius: 0.375rem;
+      padding-right: 80px;
+    }
+
+    .btn-primary {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      padding-left: 20px;
+      padding-right: 25px;
+      background-color: #007580;
+      white-space: nowrap; /* Ensure button text doesn't overflow */
+    }
+
+    .category-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .category-links .btn {
+      white-space: nowrap;
+    }
+
+    .hover-blue:hover, .nav-link:hover {
+    color: #007580 !important;  /* Light Blue Color */
+    }
+
+    .grid-item h4 {
+      color: black;  /* Set the color to black */
+      font-weight: bold;  /* Make the text bold */
+      text-align: left;
+    }
+
+    .navbar {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .navbar-nav {
+      margin-left: 0;
+    }
+
+    /* Custom styling to ensure the navbar stays aligned with no gaps */
+    .navbar-nav .nav-item {
+      margin-left: 0;
+    }
+
+    .cart-icon-container {
+      margin-left: 0;
+    }
+
+    .header_section {
+      padding-left: 0;
+    }
+
+    .custom_nav-container {
+      margin-left: 0;
+    }
+
+    /* Adjust header to eliminate padding */
+    .header_section.bg-light {
+      padding: 0;
+    }
+
+    /* Cart icon color */
+    .cart-icon-container i {
+        width: 80px;
+        height: 30px;
+      color: black; /* Default color */
+      transition: color 0.3s ease; /* Smooth transition */
+    }
+
+    .cart-icon-container i:hover {
+      color: #007580 !important; /* Hover color */
+    }
+
+    .hover-blue:hover, .nav-link:hover {
+        color: #007580 !important;  /* Light Blue Color */
+    }
+    
+
+  </style>
+</head>
+
+<body>
+
+
+   <!-- header section starts -->
+ <header class="header_section bg-light">
+  <nav class="navbar navbar-expand-lg custom_nav-container" style="height: 50px; padding: 0;">
+    <a class="navbar-brand" href="index.html" style="height: 100%; display: flex; align-items: center;">
+      <img src="./images/Logo.png" alt="" style="height: 40px;">
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class=""></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="ml-auto d-flex align-items-center">
+        <!-- Cart Icon -->
+        <div class="cart-icon-container bg-white">
+          <a href="cart.html" title="View Cart" style=" align-items: center;">
+            <i class="fa fa-shopping-cart" aria-hidden="true">Cart</i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- end header section -->
+
+  <!-- header section starts -->
+  <header class="header_section long_section px-0">
+    <nav class="navbar navbar-expand-lg custom_nav-container">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex align-items-center w-100">
+          <!-- Navigation Links -->
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item colour active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">PRODUCTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="questions.html">QUESTIONS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Blog.html">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- end header section -->
+
+
+  <h1>Question Looks Here</h1>
+  <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vel rem exercitationem modi totam dolorum.</h4>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <span class="plus-sign">+</span>
+      <h4>What types of chairs do you offer?</h4>
+      <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione ducimus atque ullam a, quas tempora cupiditate
+        rem modi consequatur laborum unde animi nam in facere ex excepturi? Recusandae, deserunt fugiat.</h5>
+    </div>
+
+    <div class="grid-item">
+      <span class="plus-sign">+</span>
+      <h4>How can we get in touch with you?</h4>
+      <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione ducimus atque ullam a, quas tempora cupiditate 
+        rem modi consequatur laborum unde animi nam in facere ex excepturi? Recusandae, deserunt fugiat.</h5>
+    </div>
+
+    <div class="grid-item">
+      <span class="plus-sign">+</span>
+      <h4>Do your chairs come with a warranty?</h4>
+      <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione ducimus atque ullam a, quas tempora cupiditate 
+        rem modi consequatur laborum unde animi nam in facere ex excepturi? Recusandae, deserunt fugiat.</h5>
+    </div>
+
+    <div class="grid-item">
+      <span class="plus-sign">+</span>
+      <h4>What will be delivered? And When?</h4>
+      <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione ducimus atque ullam a, quas tempora cupiditate 
+        rem modi consequatur laborum unde animi nam in facere ex excepturi? Recusandae, deserunt fugiat.</h5>
+    </div>
+
+    <div class="grid-item">
+      <span class="plus-sign">+</span>
+      <h4>Can I try a chair before purchasing?</h4>
+      <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione ducimus atque ullam a, quas tempora cupiditate
+        rem modi consequatur laborum unde animi nam in facere ex excepturi? Recusandae, deserunt fugiat.</h5>
+    </div>
+
+    <div class="grid-item">
+      <span class="plus-sign">+</span>
+      <h4>How do l clean and maintain my comforty chair?</h4>
+      <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione ducimus atque ullam a, quas tempora cupiditate 
+        rem modi consequatur laborum unde animi nam in facere ex excepturi? Recusandae, deserunt fugiat.</h5>
+    </div>
+  </div>
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-light text-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-dark mb-4"><img src="./images/Logo.png" alt=""></h5>
+          <p class="text-dark">Vivamus tristique odio sit amet velit semper, eu posuere turpis interdum.
+            Cras egestas purus </p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-outline-dark btn-social rounded-circle icon-link" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-dark btn-social rounded-circle icon-link" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-dark btn-social rounded-circle icon-link" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-dark btn-social rounded-circle icon-link" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-dark mb-6 head">Category</h5>
+          <div class="category-links">
+            <a class="btn btn-link text-dark hover-blue" href="">Sofa</a>
+            <a class="btn btn-link text-dark hover-blue" href="">Armchair</a>
+            <a class="btn btn-link text-dark hover-blue" href="">Wing Chair</a>
+            <a class="btn btn-link text-dark hover-blue" href="">Desk Chair</a>
+            <a class="btn btn-link text-dark hover-blue" href="">Wooden Chair</a>
+            <a class="btn btn-link text-dark hover-blue" href="">Park Bench</a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-dark mb-6 head">Category</h5>
+          <div class="category-links">
+            <a class="btn btn-link text-dark hover-blue" href="">Help & Support</a>
+            <a class="btn btn-link text-dark hover-blue" href="">Terms & Conditions</a>
+            <a class="btn btn-link text-dark hover-blue" href="">Privacy Policy</a>
+            <a class="btn btn-link text-dark hover-blue" href="">Help</a>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <h5 class="text-dark mb-4">Newsletter</h5>
+          <div class="position-relative" style="max-width: 400px;">
+            <input class="form-control border-0 w-100 " type="text" placeholder="Your email">
+            <button type="button" class="btn btn-primary py-2 position-absolute top-50 end-0 translate-middle-y me-2">Subscribe</button>
+          </div>
+          <br>
+          <h6 class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, eligendi.</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+</body>
+
+</html>

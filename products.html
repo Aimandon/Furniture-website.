@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <title>Edgecut</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+   <!-- Google Web Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+   <!-- Icon Font Stylesheet -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFFFFF;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* navbar css start */
+    .navbar {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .navbar-nav {
+      margin-left: 0;
+    }
+
+    /* Custom styling to ensure the navbar stays aligned with no gaps */
+    .navbar-nav .nav-item {
+      margin-left: 0;
+    }
+
+    .cart-icon-container {
+      margin-left: 0;
+    }
+
+    .header_section {
+      padding-left: 0;
+    }
+
+    .custom_nav-container {
+      margin-left: 0;
+    }
+
+    /* Adjust header to eliminate padding */
+    .header_section.bg-light {
+      padding: 0;
+    }
+
+    /* Cart icon color */
+    .cart-icon-container i {
+        width: 80px;
+        height: 30px;
+      color: black; /* Default color */
+      transition: color 0.3s ease; /* Smooth transition */
+    }
+
+    .cart-icon-container i:hover {
+      color: #007580 !important; /* Hover color */
+    }
+
+    .hover-blue:hover, .nav-link:hover {
+        color: #007580 !important;  /* Light Blue Color */
+    }
+
+    /* navbar css end  */
+    
+
+
+    .shop_section {
+      padding: 50px 0;
+    }
+
+    .heading_container {
+      margin-bottom: 30px;
+    }
+
+    .heading_container h2 {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .box {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .img-box img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .detail-box {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .detail-box h6 {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .detail-box span {
+      font-weight: bold;
+      color: #f47c20;
+    }
+
+    .new {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #f47c20;
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .grid-item img {
+      width: 100%;               /* Makes image take full width of the container */
+      height: 250px;             /* Fixes the height for uniformity */
+      object-fit: cover;         /* Ensures the image covers the area without stretching */
+      border-radius: 8px;        /* Adds rounded corners */
+    }
+
+    .grid-item {
+      padding: 10px;
+    }
+
+    .product-info {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .product-name {
+      margin-top: 4px;
+      font-size: 1rem;
+    }
+    .product-name:hover {
+    color: #007580;  /* Light blue color */
+    }
+
+    .product-price {
+      color: black;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .product-price:hover {
+    color: #007580;  /* Light blue color */
+    }
+
+    .cart-icon {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .cart-icon:hover {
+    color: #007580;  /* Light blue color */
+    }
+
+    .hover-blue:hover, .nav-link:hover {
+      color: #007580 !important;  /* Light Blue Color */
+    }
+
+    .btn-primary {
+    position: absolute;
+    top: 30%;
+    right: 10px; /* Adjust this value to control the button's position */
+    transform: translateY(-50%);
+    padding-left: 20px;
+    padding-right: 25px;
+}
+
+.addToCart {
+  color: white;
+  background-color: #007580;
+  width: 100%;
+  height: 40px;
+  border: 2px solid #F0F2F3; /* Lighter border color */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Set a comfortable font size */
+  font-weight: bold; /* Bold text for emphasis */
+  text-transform: uppercase; /* Uppercase text for a cleaner look */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.addToCart:hover {
+  background-color: #005f56; /* Darker shade on hover */
+  cursor: pointer; /* Indicate that it's clickable */
+  transform: translateY(-3px); /* Slightly raise the button */
+}
+
+.addToCart:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 2px rgba(0, 117, 128, 0.5); /* Add custom focus effect */
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- header section starts -->
+ <header class="header_section bg-light">
+  <nav class="navbar navbar-expand-lg custom_nav-container" style="height: 50px; padding: 0;">
+    <a class="navbar-brand" href="index.html" style="height: 100%; display: flex; align-items: center;">
+      <img src="./images/Logo.png" alt="" style="height: 40px;">
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class=""></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="ml-auto d-flex align-items-center">
+        <!-- Cart Icon -->
+        <div class="cart-icon-container bg-white">
+          <a href="cart.html" title="View Cart" style=" align-items: center;">
+            <i class="fa fa-shopping-cart" aria-hidden="true">Cart</i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- end header section -->
+
+
+  <!-- header section starts -->
+  <header class="header_section long_section px-0">
+    <nav class="navbar navbar-expand-lg custom_nav-container">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex align-items-center w-100">
+          <!-- Navigation Links -->
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item colour active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">PRODUCTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="questions.html">QUESTIONS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Blog.html">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- end header section -->
+
+
+
+  <div class="container my-5">
+    <div class="row">
+        <!-- First Row -->
+        <div class="col-lg-3 col-md-6 col-sm-12 grid-item">
+          <img src="./images/pic2.jpeg" alt="Product 1">
+          <div class="product-info">
+              <span class="product-name">White Chair</span>
+              <i class="fas fa-shopping-cart cart-icon"></i>
+          </div>
+          <span class="product-price">$20.00</span>
+          <br>
+            <button class="addToCart">ADD TO CART</button>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 grid-item">
+            <img src="./images/pic3.jpeg" alt="Product 2">
+            <div class="product-info">
+              <span class="product-name">Pink Soffa</span>
+              <i class="fas fa-shopping-cart cart-icon"></i>
+            </div>
+            <span class="product-price">$25.00</span>
+            <br>
+            <button class="addToCart">ADD TO CART</button>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 grid-item">
+            <img src="./images/pic4.jpeg" alt="Product 3">
+            <div class="product-info">
+              <span class="product-name">Orange Soffa</span>
+              <i class="fas fa-shopping-cart cart-icon"></i>
+            </div>
+            <span class="product-price">$18.00</span>
+            <br>
+            <button class="addToCart">ADD TO CART</button>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 grid-item">
+            <img src="./images/pic5.jpeg" alt="Product 4">
+            <div class="product-info">
+              <span class="product-name">White Soffa</span>
+              <i class="fas fa-shopping-cart cart-icon"></i>
+            </div>
+            <span class="product-price">$22.00</span>
+            <br>
+            <button class="addToCart">ADD TO CART</button>
+        </div>
+
+        <!-- Add similar structure for the remaining rows -->
+        <div class="col-lg-3 col-md-6 col-sm-12 grid-item">
+            <img src="./images/pic7.jpeg" alt="Product 5">
+            <div class="product-info">
+              <span class="product-name">Library Stool Chair</span>
+              <i class="fas fa-shopping-cart cart-icon"></i>
+            </div>
+            <span class="product-price">$36.00</span>
+            <br>
+            <button class="addToCart">ADD TO CART</button>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 grid-item">
+            <img src="./images/pic9.jpeg" alt="Product 5">
+            <div class="product-info">
+              <span class="product-name">Grey Chair</span>
+              <i class="fas fa-shopping-cart cart-icon"></i>
+            </div>
+            <span class="product-price">$31.00</span>
+            <br>
+            <button class="addToCart">ADD TO CART</button>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 grid-item">
+            <img src="./images/pic10.jpeg" alt="Product 5">
+            <div class="product-info">
+              <span class="product-name">Green Classic</span>
+              <i class="fas fa-shopping-cart cart-icon"></i>
+            </div>
+            <span class="product-price">$22.00</span>
+            <br>
+            <button class="addToCart">ADD TO CART</button>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 grid-item">
+            <img src="./images/pic2.jpeg" alt="Product 5">
+            <div class="product-info">
+              <span class="product-name">Library Stool </span>
+              <i class="fas fa-shopping-cart cart-icon"></i>
+            </div>
+            <span class="product-price">$90.00</span>
+            <br>
+            <button class="addToCart">ADD TO CART</button>
+        </div>
+        <!-- ... Add more grid items as needed -->
+
+        <div class="col-lg-3 col-md-6 col-sm-12 grid-item">
+          <img src="./images/pic7.jpeg" alt="Product 5">
+          <div class="product-info">
+            <span class="product-name">cclassic</span>
+            <i class="fas fa-shopping-cart cart-icon"></i>
+          </div>
+          <span class="product-price">$3.00</span>
+          <br>
+          <button class="addToCart">ADD TO CART</button>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 grid-item">
+          <img src="./images/pic9.jpeg" alt="Product 5">
+          <div class="product-info">
+            <span class="product-name">Pinkish</span>
+            <i class="fas fa-shopping-cart cart-icon"></i>
+          </div>
+          <span class="product-price">$35.00</span>
+          <br>
+          <button class="addToCart">ADD TO CART</button>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 grid-item">
+          <img src="./images/pic10.jpeg" alt="Product 5">
+          <div class="product-info">
+            <span class="product-name">Soffa</span>
+            <i class="fas fa-shopping-cart cart-icon"></i>
+          </div>
+          <span class="product-price">$54.00</span>
+          <br>
+          <button class="addToCart">ADD TO CART</button>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 grid-item">
+          <img src="./images/pic2.jpeg" alt="Product 5">
+          <div class="product-info">
+            <span class="product-name">Stool</span>
+            <i class="fas fa-shopping-cart cart-icon"></i>
+          </div>
+          <span class="product-price">$76.00</span>
+          <br>
+          <button class="addToCart">ADD TO CART</button>
+      </div>
+      <!-- ... Add more grid items as needed -->
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="text-center py-5" style="background-color: #F0F2F3;">
+    <h1>Or subscribe to the newsletter</h1>
+    <div class="d-flex  justify-content-center align-items-center mt-3" style="gap: 250px;">
+      <h6 style="text-decoration: underline;">Email Address</h6>
+      <h6 style="text-decoration: underline;">Submit</h6>
+    </div>
+    
+    <h1 class="mt-4">Follow Products And Discounts On Instagram</h1>
+    
+    <div class="container my-5" style="background-color: #F0F2F3;">
+      <div class="row justify-content-center">
+        <div class="col-6 col-sm-2 text-center" style="height: 150px;">
+          <img src="images/pic9.jpeg" alt="Item 1" class="img-fluid rounded mb-2" style="object-fit: cover; width: 100%; height: 150px;">
+          <div>Item 1</div>
+        </div>
+        <div class="col-6 col-sm-2 text-center" style="height: 150px;">
+          <img src="images/pic5.jpeg" alt="Item 2" class="img-fluid rounded mb-2" style="object-fit: cover; width: 100%; height: 150px;">
+          <div>Item 2</div>
+        </div>
+        <div class="col-6 col-sm-2 text-center" style="height: 150px;">
+          <img src="images/pic3.jpeg" alt="Item 3" class="img-fluid rounded mb-2" style="object-fit: cover; width: 100%; height: 150px;">
+          <div>Item 3</div>
+        </div>
+        <div class="col-6 col-sm-2 text-center" style="height: 150px;">
+          <img src="images/pic2.jpeg" alt="Item 4" class="img-fluid rounded mb-2" style="object-fit: cover; width: 100%; height: 150px;">
+          <div>Item 4</div>
+        </div>
+        <div class="col-6 col-sm-2 text-center" style="height: 150px;">
+          <img src="images/pic4.jpeg" alt="Item 5" class="img-fluid rounded mb-2" style="object-fit: cover; width: 100%; height: 150px;">
+          <div>Item 5</div>
+        </div>
+        <div class="col-6 col-sm-2 text-center" style="height: 150px;">
+          <img src="images/pic7.jpeg" alt="Item 6" class="img-fluid rounded mb-2" style="object-fit: cover; width: 100%; height: 150px;">
+          <div>Item 6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light text-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container py-5">
+          <div class="row g-5">
+              <div class="col-lg-3 col-md-6">
+                  <h5 class="text-dark mb-4"><img src="./images/Logo.png" alt=""></h5>
+                  <p class="text-dark">Vivamus tristique odio sit amet velit semper, eu posuere turpis interdum.
+                    Cras egestas purus </p>
+                  <div class="d-flex pt-2">
+                      <a class="btn btn-outline-dark btn-social rounded-circle icon-link" href=""><i class="fab fa-twitter"></i></a>
+                      <a class="btn btn-outline-dark btn-social rounded-circle icon-link" href=""><i class="fab fa-facebook-f"></i></a>
+                      <a class="btn btn-outline-dark btn-social rounded-circle icon-link" href=""><i class="fab fa-youtube"></i></a>
+                      <a class="btn btn-outline-dark btn-social rounded-circle icon-link" href=""><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                <h5 class="text-dark mb-6 head">Category</h5>
+                <div class="category-links">
+                    <a class="btn btn-link text-dark hover-blue" href="">Sofa</a>
+                    <a class="btn btn-link text-dark hover-blue" href="">Armchair</a>
+                    <a class="btn btn-link text-dark hover-blue" href="">Wing Chair</a>
+                    <a class="btn btn-link text-dark hover-blue" href="">Desk Chair</a>
+                    <a class="btn btn-link text-dark hover-blue" href="">Wooden Chair</a>
+                    <a class="btn btn-link text-dark hover-blue" href="">Park Bench</a>
+                </div>
+            </div>
+  
+            <div class="col-lg-2 col-md-6">
+              <h5 class="text-dark mb-6 head">Category</h5>
+              <div class="category-links">
+                  <a class="btn btn-link text-dark hover-blue" href="">Help & Support</a>
+                  <a class="btn btn-link text-dark hover-blue" href="">Terms & Conditions</a>
+                  <a class="btn btn-link text-dark hover-blue" href="">Privacy Policy</a>
+                  <a class="btn btn-link text-dark hover-blue" href="">Help</a>
+              </div>
+          </div>
+              <div class="col-lg-5 col-md-6">
+                  <h5 class="text-dark mb-4">Newsletter</h5>
+                  <div class="position-relative " style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 " type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                  </div>
+                  <br>
+                  <h6 class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, eligendi.</h6>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Footer End -->
+
+
+
+</body>
+<script src="./index.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</html>
